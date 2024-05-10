@@ -1,0 +1,38 @@
+{
+    "name": "apprendable/first-package",
+    "description": "This is my first package",
+    "autoload": {
+        "files": [
+          "src/helpers.php"  
+        ],
+        "psr-4": {
+            "Apprendable\\FirstPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Apprendable\\FirstPackage\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Akpevwe",
+            "email": "essiakpevwepraise@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "orchestra/testbench": "^6.43"
+    }, 
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Apprendable\\FirstPackage\\FirstPackageServiceProvider",
+                "Apprendable\\FirstPackage\\RouteServiceProvider"
+            ],
+            "aliases":{
+                "FirstPackage": "Apprendable\\FirstPackage\\Facades\\FirstPackage"
+            }
+        }
+    }
+}
+
